@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "621651876902",
+    "project_id": "nubcc-26810",
+    "storage_bucket": "nubcc-26810.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621651876902:android:f1f875feb3d67a0b115ae7",
+        "android_client_info": {
+          "package_name": "com.zubaer.nubcc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621651876902-3car3ludfvpqb32mrvcslpdhhqgr9i3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zubaer.nubcc",
+            "certificate_hash": "0737713b6c64e65e40b07477eff274e193dbc8bf"
+          }
+        },
+        {
+          "client_id": "621651876902-t5hpt7p7fahhjfiuu0oocdvnhcdm4a7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKXEuVYUVXq42DRJyg5v44pGUpGfCovMU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621651876902-t5hpt7p7fahhjfiuu0oocdvnhcdm4a7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

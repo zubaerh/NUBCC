@@ -7,6 +7,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 import com.zubaer.nubcc.Fragment.BlueFragment;
 import com.zubaer.nubcc.Fragment.GreenFragment;
 import com.zubaer.nubcc.Fragment.RedFragment;
@@ -15,6 +16,8 @@ public class ChatActivity extends AppCompatActivity {
     private TabLayout tab;
     private ViewPager2 viewPager;
     private ViewPagerAdapter viewPagerAdapter;
+
+    private int [] icon = {R.drawable.ic_computer,R.drawable.ic_mobile_phone,R.drawable.ic_stadium};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,27 +34,9 @@ public class ChatActivity extends AppCompatActivity {
        viewPager.setAdapter(viewPagerAdapter);
 
 
-        tab.getTabAt(0).setIcon(R.drawable.ic_launcher_background);
-        tab.getTabAt(1).setIcon(R.drawable.ic_mobile_phone);
-        tab.getTabAt(2).setIcon(R.drawable.ic_stadium);
 
-        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                super.onPageScrolled(position, positionOffset, positionOffsetPixels);
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                tab.selectTab(tab.getTabAt(position));
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-                super.onPageScrollStateChanged(state);
-            }
-        });
+       viewPager.setAdapter(viewPagerAdapter);
+        new TabLayoutMediator(tab,viewPager,(tab1, position) -> tab1.setIcon(icon[position])).attach();
 
 
     }
