@@ -4,9 +4,12 @@ public class Teacher {
     private String img;
     private String name;
     private String deg;
-    private String phone;
+    private int phone;
 
-    public Teacher(String img, String name, String deg, String phone){
+    public Teacher() {
+    }
+
+    public Teacher(String img, String name, String deg, int phone){
         this.img = img;
         this.name = name;
         this.deg = deg;
@@ -19,6 +22,6 @@ public class Teacher {
     public void setName(String name){this.name = name;}
     public String getDeg(){return deg;}
     public void setDeg(String deg){this.deg = deg;}
-    public String getPhone(){return phone;}
-    public void setPhone(String phone){this.phone = phone;}
+    public int getPhone(){return phone;}
+    public void setPhone(int phone){this.phone = phone;}
 }

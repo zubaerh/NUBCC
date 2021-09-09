@@ -39,7 +39,7 @@ public class TeacherRecyclerAdapter extends RecyclerView.Adapter<TeacherRecycler
         Picasso.get().load(mData.get(position).getImg()).into(holder.iv_teacher_img);
         holder.tv_teacher_name.setText(mData.get(position).getName());
         holder.tv_teacher_deg.setText(mData.get(position).getDeg());
-        holder.tv_teacher_phone.setText(mData.get(position).getPhone());
+        holder.tv_teacher_phone.setText(""+mData.get(position).getPhone());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +59,7 @@ public class TeacherRecyclerAdapter extends RecyclerView.Adapter<TeacherRecycler
                 Picasso.get().load(mData.get(position).getImg()).into(iv_teacher_img);
                 tv_teacher_name.setText(mData.get(position).getName());
                tv_teacher_deg.setText(mData.get(position).getDeg());
-                tv_teacher_phone.setText(mData.get(position).getPhone());
+                tv_teacher_phone.setText(""+mData.get(position).getPhone());
 
                 dialog.show();
 

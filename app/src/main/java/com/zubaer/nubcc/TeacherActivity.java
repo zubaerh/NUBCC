@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -45,8 +46,9 @@ private DatabaseReference teachers;
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 teacherArrayList.clear();
                 for(DataSnapshot ds : snapshot.getChildren()){
+                    Log.d("test",ds.toString());
                     Teacher teacher = ds.getValue(Teacher.class);
-                    teacherArrayList.add(teacher);
+                   teacherArrayList.add(teacher);
                 }
                 teacherRecyclerAdapter.notifyDataSetChanged();
             }
