@@ -8,16 +8,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
-    <ImageView
-        android:id="@+id/iv_teacher_img"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginRight="8dp"
-        android:src="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:orientation="horizontal"
+        android:layout_height="match_parent"
+        android:layout_weight="2">
+        <ImageView
+            android:id="@+id/iv_teacher_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/ic_launcher"/>
+
+    </LinearLayout>
+
     <LinearLayout
         android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
         android:orientation="vertical">
         <TextView
             android:id="@+id/tv_teacher_name"
@@ -42,5 +52,46 @@
             android:textStyle="bold"
             android:text="+8801987654321"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/edit_teacher"
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_edit"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/delete_teacher"
+                android:layout_gravity="center"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_delete"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
 </LinearLayout>
 </LinearLayout>
